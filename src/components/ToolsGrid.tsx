@@ -26,6 +26,11 @@ import TextBinaryConverter from './tools/TextBinaryConverter';
 import HexConverter from './tools/HexConverter';
 import PasswordGenerator from './tools/PasswordGenerator';
 import PasswordChecker from './tools/PasswordChecker';
+import LanguageTranslator from './tools/LanguageTranslator';
+import TextToSpeech from './tools/TextToSpeech';
+import SpeechToText from './tools/SpeechToText';
+import BirthdayMapper from './tools/BirthdayMapper';
+import SpellChecker from './tools/SpellChecker';
 
 const ToolsGrid = () => {
   const [activeModal, setActiveModal] = useState<string | null>(null);
@@ -92,40 +97,40 @@ const ToolsGrid = () => {
       title: 'Language Translator',
       description: 'Translate text between languages',
       icon: Languages,
-      component: <div className="text-center p-8 font-mono text-muted-foreground">Coming Soon...</div>,
-      status: 'coming-soon' as const
+      component: <LanguageTranslator />,
+      status: 'active' as const
     },
     {
       id: 'text-to-speech',
       title: 'Text-to-Speech',
       description: 'Convert text to spoken audio',
       icon: Volume2,
-      component: <div className="text-center p-8 font-mono text-muted-foreground">Coming Soon...</div>,
-      status: 'coming-soon' as const
+      component: <TextToSpeech />,
+      status: 'active' as const
     },
     {
       id: 'speech-to-text',
       title: 'Speech-to-Text',
       description: 'Convert speech to written text',
       icon: Mic,
-      component: <div className="text-center p-8 font-mono text-muted-foreground">Coming Soon...</div>,
-      status: 'coming-soon' as const
+      component: <SpeechToText />,
+      status: 'active' as const
     },
     {
       id: 'birthday-mapper',
       title: 'Birthday Mapper',
       description: 'Track and organize birthdays',
       icon: Calendar,
-      component: <div className="text-center p-8 font-mono text-muted-foreground">Coming Soon...</div>,
-      status: 'coming-soon' as const
+      component: <BirthdayMapper />,
+      status: 'active' as const
     },
     {
       id: 'spell-checker',
       title: 'Spell Checker',
       description: 'Check and correct text spelling',
       icon: SpellCheck,
-      component: <div className="text-center p-8 font-mono text-muted-foreground">Coming Soon...</div>,
-      status: 'coming-soon' as const
+      component: <SpellChecker />,
+      status: 'active' as const
     }
   ];
 
